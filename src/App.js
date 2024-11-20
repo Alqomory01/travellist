@@ -48,7 +48,8 @@ function Form({onAddItems}) {
     setDescription('');
     setQuantity('');
   }
-return <form className='add-form' onSubmit={handleSubmit}>
+return <form  className='add-form' onSubmit={handleSubmit}>
+  {/* <div className='parent '> */}
   <h3> What do you need for your 😍trip</h3>
   <select value={quantity} onChange={(e) => setQuantity(Number(e.target.value))}>
     {/* <option value={1}>1</option>
@@ -59,6 +60,7 @@ return <form className='add-form' onSubmit={handleSubmit}>
   </select>
   <input type='text' placeholder='Item...' value={description} onChange={(e) => setDescription(e.target.value)}></input>
     <button >Add</button>
+    {/* </div> */}
 </form>
 }
 function PackingList({ items, onDeleteItems, onToggleItems }) {
